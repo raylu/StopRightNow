@@ -1,3 +1,7 @@
 # ninja log v5
-1	596	7373919543474714	StopRightNow/CMakeFiles/StopRightNow.dir/StopRightNow.cpp.obj	e83756acee79286f
-597	1184	7373919549181244	StopRightNow/StopRightNow.exe	ada6395e76b1851f
+2	1003	7375663849460345	StopRightNow/CMakeFiles/StopRightNow.dir/StopRightNow.cpp.obj	1c2a5b121ae42d48
+1443	2044	7375663858859920	StopRightNow/StopRightNow.exe	91f61b409fc16cca
+19	1443	7375663853885599	StopRightNow/CMakeFiles/StopRightNow.dir/main_windows.cpp.obj	d3a7bc2bd39eb9da
+13	1001	7375663849460345	StopRightNow/CMakeFiles/StopRightNow.dir/main.cpp.obj	8e0574b32456026f
+2	1344	7375678335152624	StopRightNow/CMakeFiles/StopRightNow.dir/main.cpp.obj	8e0574b32456026f
+1345	1931	7375678339739863	StopRightNow/StopRightNow.exe	91f61b409fc16cca

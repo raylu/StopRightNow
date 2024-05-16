@@ -72,6 +72,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 build cmake_object_order_depends_target_StopRightNow: phony || StopRightNow\CMakeFiles\StopRightNow.dir
 
 build StopRightNow\CMakeFiles\StopRightNow.dir\StopRightNow.cpp.obj: CXX_COMPILER__StopRightNow_Debug ..\..\..\StopRightNow\StopRightNow.cpp || cmake_object_order_depends_target_StopRightNow
+  DEFINES = -DPLATFORM_WINDOWS
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   OBJECT_DIR = StopRightNow\CMakeFiles\StopRightNow.dir
   OBJECT_FILE_DIR = StopRightNow\CMakeFiles\StopRightNow.dir
@@ -79,6 +80,15 @@ build StopRightNow\CMakeFiles\StopRightNow.dir\StopRightNow.cpp.obj: CXX_COMPILE
   TARGET_PDB = StopRightNow\StopRightNow.pdb
 
 build StopRightNow\CMakeFiles\StopRightNow.dir\main.cpp.obj: CXX_COMPILER__StopRightNow_Debug ..\..\..\StopRightNow\main.cpp || cmake_object_order_depends_target_StopRightNow
+  DEFINES = -DPLATFORM_WINDOWS
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = StopRightNow\CMakeFiles\StopRightNow.dir
+  OBJECT_FILE_DIR = StopRightNow\CMakeFiles\StopRightNow.dir
+  TARGET_COMPILE_PDB = StopRightNow\CMakeFiles\StopRightNow.dir\
+  TARGET_PDB = StopRightNow\StopRightNow.pdb
+
+build StopRightNow\CMakeFiles\StopRightNow.dir\main_windows.cpp.obj: CXX_COMPILER__StopRightNow_Debug ..\..\..\StopRightNow\main_windows.cpp || cmake_object_order_depends_target_StopRightNow
+  DEFINES = -DPLATFORM_WINDOWS
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   OBJECT_DIR = StopRightNow\CMakeFiles\StopRightNow.dir
   OBJECT_FILE_DIR = StopRightNow\CMakeFiles\StopRightNow.dir
@@ -93,7 +103,7 @@ build StopRightNow\CMakeFiles\StopRightNow.dir\main.cpp.obj: CXX_COMPILER__StopR
 #############################################
 # Link the executable StopRightNow\StopRightNow.exe
 
-build StopRightNow\StopRightNow.exe: CXX_EXECUTABLE_LINKER__StopRightNow_Debug StopRightNow\CMakeFiles\StopRightNow.dir\StopRightNow.cpp.obj StopRightNow\CMakeFiles\StopRightNow.dir\main.cpp.obj
+build StopRightNow\StopRightNow.exe: CXX_EXECUTABLE_LINKER__StopRightNow_Debug StopRightNow\CMakeFiles\StopRightNow.dir\StopRightNow.cpp.obj StopRightNow\CMakeFiles\StopRightNow.dir\main.cpp.obj StopRightNow\CMakeFiles\StopRightNow.dir\main_windows.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
