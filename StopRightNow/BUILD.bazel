@@ -1,0 +1,35 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+cc_binary(
+	name = "main",
+	srcs = ["main.cpp"],
+	deps = [
+		":StopRightNow",
+	] + select({
+		"@platforms//os:linux": [":main_linux"],
+		"@platforms//os:windows": [":main_windows"],
+	}),
+	defines = select({
+		"@platforms//os:linux": ["PLATFORM_LINUX"],
+		"@platforms//os:windows": ["PLATFORM_WINDOWS"],
+	}),
+)
+
+cc_library(
+	name = "main_linux",
+	srcs = ["main_linux.cpp"],
+	target_compatible_with = ["@platforms//os:linux"],
+)
+
+cc_library(
+	name = "main_windows",
+	srcs = ["main_windows.cpp"],
+	target_compatible_with = ["@platforms//os:windows"],
+)
+
+cc_library(
+	name = "StopRightNow",
+	srcs = ["StopRightNow.cpp"],
+	hdrs = ["StopRightNow.h"],
+)

@@ -1,0 +1,3 @@
+{
+	"bazel.buildifierExecutable": "@buildifier_prebuilt//:buildifier"
+}
